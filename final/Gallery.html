@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-gallery.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Index.html" class="logo">E-RECYLE</a>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Komunitas.html">Community</a></li>
+            <li><a href="About.html">About Us</a></li>
+        </ul>
+    </div>
+    <header>
+        <header>
+            <div class="teks">
+                <p>GALLERY KREATIF</p>
+            </div>
+        </header>
+    </header>
+    <div class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Pop-up Image">
+        </div>
+    </div>
+    <section class="gallery">
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar2.jpg')">
+                <img src="assets/gambar2.jpg" alt="Kesenian 2">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar4.jpg')">
+                <img src="assets/gambar4.jpeg" alt="Kesenian 3">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar4.jpg')">
+                <img src="assets/gambar4.jpg" alt="Kesenian 4">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar5.jpg')">
+                <img src="assets/gambar5.jpg" alt="Kesenian 1">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar7.jpg')">
+                <img src="assets/gambar7.jpg" alt="Kesenian 3">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/kertas.jpg')">
+                <img src="assets/kertas.jpg" alt="Kesenian 3">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar10.jpg')">
+                <img src="assets/gambar10.jpg" alt="Kesenian 2">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar11.jpg')">
+                <img src="assets/gambar11.jpg" alt="Kesenian 3">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar13.jpg')">
+                <img src="assets/gambar13.jpg" alt="Kesenian 3">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar12.jpg')">
+                <img src="assets/gambar12.jpg" alt="Kesenian 1">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar15.jpg')">
+                <img src="assets/gambar15.jpg" alt="Kesenian 2">
+            </a>
+        </div>
+        <div class="art-piece">
+            <a href="#" onclick="openPopup('assets/gambar16.jpg')">
+                <img src="assets/gambar16.jpg" alt="Kesenian 3">
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-column">
+            <h2 class="footer-title">Contact Us</h2>
+            <ul class="footer-list">
+                <li><strong>E-mail</strong></li>
+                <li><p>erecyle@gmail.com</p></li>
+                <li><strong>Phone</strong></li>
+                <li><p>089654768012</p></li>
+                <li><strong>Address</strong></li>
+                <li><p>Jalan Beringin No.2 Kec.Beji, Kab.Bandung, Jawa Barat</p></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2 class="footer-title">E-RECYLE</h2>
+            <p>Bersama - sama Kita menjalani perjalanan menuju dunia yang lebih hijau dan penuh kreativitas, dimana tiap langkah kecil kita mengubah sampah menjadi seni yang menginspirasi</p>
+            <div class="social-icons">
+                <a href="#"><span class="fab fa-facebook-square"></span></a>
+                <a href="#"><span class="fab fa-instagram"></span></a>
+                <a href="#"><span class="fab fa-linkedin"></span></a>
+                <a href="#"><span class="fab fa-github"></span></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h2 class="footer-title">Overview</h2>
+            <ul class="footer-menu">
+                <li><strong><a href="Index.html">Home</a></strong></li>
+                <li><strong><a href="Gallery.html">Gallery</a></strong></li>
+                <li><strong><a href="Komunitas.html">Community</a></strong></li>
+                <li><strong><a href="About.html">About Us</a></strong></li>
+            </ul>
+        </div>
+        <hr class="footer-separator">
+        <div class="copyright">
+            Copyright &copy; E-RECYLE by erecyle
+        </div>
+    </footer>
+    <script>
+        // Fungsi untuk membuka popup dan menampilkan gambar
+        function openPopup(imageSrc) {
+            var popup = document.querySelector(".popup");
+            var popupImage = document.getElementById("popup-image");
+            popupImage.src = imageSrc;
+            popup.style.display = "block";
+    
+            // Menambahkan event listener untuk menutup popup saat gambar di dalam popup diklik
+            popupImage.addEventListener("click", function() {
+                closePopup();
+            });
+        }
+    
+        // Fungsi untuk menutup popup
+        function closePopup() {
+            var popup = document.querySelector(".popup");
+            popup.style.display = "none";
+        }
+    </script>
+    
+    
+</body>
+</html>

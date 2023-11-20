@@ -1,0 +1,235 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color:rgba(249, 248, 248, 1);
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+}
+
+.navbar ul{
+    display: flex;
+    margin-right: 55px;
+}
+
+.navbar ul li a{
+    margin: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(39, 76, 91);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: black;  
+}
+
+
+.logo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(39, 76, 91);
+    font-size: 25px;
+}
+
+.home {
+    background-image: url(../assets/gambar11.jpg);
+    background-size: cover;
+    background-position: 0 -250px;
+    margin-top: 10vh;
+    height: 70vh; 
+}
+
+.desc {
+    background-color:rgba(249, 248, 248, 1);
+    min-height: 30vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.example{
+    margin-top: 70px;
+    width: 800px;
+}
+
+.example h2{
+    margin-top: 50px;
+    color: rgba(39, 76, 91, 1);
+}
+
+.example ol{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: rgba(82, 92, 96, 1);
+}
+
+.example a{
+    margin-top: 20px;
+    color: rgba(82, 92, 96, 1);
+}
+
+.floating-box {
+    width: 800px;
+    height: 150px;
+    background-color: white;
+    position: absolute; 
+    border-radius: 25px;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.floating-box h1 {
+    text-align: left;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: 50px;
+    line-height: 50px; 
+    color: rgba(39, 76, 91, 1);
+    font-weight: bold;
+}
+
+.floating-box p {
+    text-align: left;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgba(39, 76, 91, 1);
+}
+
+.footer {
+    background-color: rgba(241, 239, 240, 1);
+    color: #000;
+    border-top: 1px solid black;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+}
+
+.footer-column:first-child {
+    text-align: justify;
+}
+
+.footer-column:nth-child(2) {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.footer-column:last-child {
+    text-align: justify;
+}
+
+.footer-column:nth-child(2)::before,
+.footer-column:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: calc(100% - 40px); 
+    background-color: rgba(212, 212, 212, 1); 
+}
+
+.footer-column:nth-child(2)::before {
+    left: 0;
+}
+
+.footer-column:nth-child(2)::after {
+    right: 0;
+}
+
+.footer-separator {
+    width: 100%;
+    border-top: 1px solid rgba(212, 212, 212, 1);
+    margin: 20px 0; 
+}
+
+.copyright {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px; 
+    color: rgb(0, 0, 0);
+}
+
+.footer-title {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-list,
+.footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li,
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-list li strong,
+.footer-list li p{
+    color: rgb(0, 0, 0);
+}
+
+.footer-list strong,
+.footer-menu strong {
+    font-weight: bold;
+}
+.footer-menu li a{
+    color: rgb(0, 0, 0);
+}
+
+.footer-column:nth-child(2) p{
+    color: rgb(0, 0, 0);
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a{
+    margin: 3px;
+}
+
+.social-icons span{
+    font-size: 20px;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+}
